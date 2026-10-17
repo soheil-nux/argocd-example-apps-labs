@@ -18,21 +18,21 @@ spec:
           name: guestbook-ui
           ports:
             - containerPort: 80
-      env:
+        env:
         # HTTP Proxy
-        - name: HTTP_PROXY
-          value: "http://192.168.108.17:3128"
-        - name: http_proxy
-          value: "http://192.168.108.17:3128"
+          - name: HTTP_PROXY
+            value: "http://192.168.108.17:3128"
+          - name: http_proxy
+            value: "http://192.168.108.17:3128"
 
         # HTTPS Proxy
-        - name: HTTPS_PROXY
-          value: "http://192.168.108.17:3128"
-        - name: https_proxy
-          value: "http://192.168.108.17:3128"
+          - name: HTTPS_PROXY
+            value: "http://192.168.108.17:3128"
+          - name: https_proxy
+            value: "http://192.168.108.17:3128"
 
         # NO_PROXY (حیاتی برای ارتباطات داخلی کلاستر کوبرنتیز)
-        - name: NO_PROXY
-          value: "localhost,127.0.0.1,.cluster.local,.svc,10.96.0.0/12,10.244.0.0/16,infnexus.tiddev.com"
-        - name: no_proxy
-          value: "localhost,127.0.0.1,.cluster.local,.svc,10.96.0.0/12,10.244.0.0/16,infnexus.tiddev.com"
+          - name: NO_PROXY
+            value: "localhost,127.0.0.1,.cluster.local,.svc,10.96.0.0/12,10.244.0.0/16,infnexus.tiddev.com"
+          - name: no_proxy
+            value: "localhost,127.0.0.1,.cluster.local,.svc,10.96.0.0/12,10.244.0.0/16,infnexus.tiddev.com"
